@@ -40,22 +40,14 @@ class TestClass: ObservableObject {
                 outputSettings:
                     [
                         AVVideoWidthKey: 1000,
-//                        AVVideoHeightKey: 1000,
+                        AVVideoHeightKey: 1000,
                         AVVideoCodecKey: AVVideoCodecType.h264,
                         AVVideoCompressionPropertiesKey: [
                             AVVideoQualityKey: 0.4
                         ]
                     ]
             )
-            
-            
 
-            print(videoWriter)
-            
-            let abba = AVOutputSettingsAssistant(preset: .preset1920x1080)
-            print(abba?.videoSettings)
-            
-            
             await MainActor.run {
                 self.done = true
             }
